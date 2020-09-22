@@ -1,6 +1,5 @@
 
-
-var email = "email@email.com"
+var email = "email@dbsaidnasifbaifba.com"
 var firstName = "Jeff"
 var lastName = "Li"
 var address1 = "123 4th Avenue"
@@ -11,27 +10,58 @@ var state = "NY"
 var zipCode = "10000"
 var phoneNumber = "1111111111"
 
-function shopifyAutofill() {
-	try {
-		document.getElementById("checkout_email").value = email
-		document.getElementById("checkout_shipping_address_first_name").value = firstName
-		document.getElementById("checkout_shipping_address_last_name").value = lastName
-		document.getElementById("checkout_shipping_address_address1").value = address1
-		document.getElementById("checkout_shipping_address_address2").value = address2
-		document.getElementById("checkout_shipping_address_city").value = city
-		document.getElementById("checkout_shipping_address_country").value = country
-		document.getElementById("checkout_shipping_address_province").value = state
-		document.getElementById("checkout_shipping_address_zip").value = zipCode
-		document.getElementById("checkout_shipping_address_phone").value = phoneNumber
-	} catch {
-		console.log("not checkout page")
-	}
-	
-}
+// physical items - it's usually checkout_shipping
+$('#checkout_email').val(email);
+$('#checkout_shipping_address_first_name').val(firstName);
+$('#checkout_shipping_address_last_name').val(lastName);
+$('#checkout_shipping_address_address1').val(address1);
+$('#checkout_shipping_address_address2').val(address2);
+$('#checkout_shipping_address_city').val(city);
+$('#checkout_shipping_address_country').val(country);
+$('#checkout_shipping_address_zip').val(zipCode);
+$('#checkout_shipping_address_phone').val(phoneNumber);
+$('#checkout_shipping_address_province').val(state);
 
 
-// shopifyAutofill()
+// digital items - it's usually checkout_billing
+$('#checkout_billing_address_first_name').val(firstName);
+$('#checkout_billing_address_last_name').val(lastName);
+$('#checkout_billing_address_address1').val(address1);
+$('#checkout_billing_address_address2').val(address2);
+$('#checkout_billing_address_city').val(city);
+$('#checkout_billing_address_country').val(country);
+$('#checkout_billing_address_zip').val(zipCode);
+$('#checkout_billing_address_phone').val(phoneNumber);
+$('#checkout_billing_address_province').val(state);
+
+
 $(function() {
-	$("#checkout_email").hide();
+	try {
+		$('#checkout_email').val(email);
+		$('#checkout_shipping_address_first_name').val(firstName);
+		$('#checkout_shipping_address_last_name').val(lastName);
+		$('#checkout_shipping_address_address1').val(address1);
+		$('#checkout_shipping_address_address2').val(address2);
+		$('#checkout_shipping_address_city').val(city);
+		$('#checkout_shipping_address_country').val(country);
+		$('#checkout_shipping_address_zip').val(zipCode);
+		$('#checkout_shipping_address_phone').val(phoneNumber);
+		$('checkout_shipping_address_province').val(state);
+	} catch (err) {
+		console.log(err)
+	}
+	try {
+		$('#checkout_billing_address_first_name').val(firstName);
+		$('#checkout_billing_address_last_name').val(lastName);
+		$('#checkout_billing_address_address1').val(address1);
+		$('#checkout_billing_address_address2').val(address2);
+		$('#checkout_billing_address_city').val(city);
+		$('#checkout_billing_address_country').val(country);
+		$('#checkout_billing_address_zip').val(zipCode);
+		$('#checkout_billing_address_phone').val(phoneNumber);
+		$('#checkout_billing_address_province').val(state);
+	} catch (err) {
+		console.log(err)
+	}
 
 });

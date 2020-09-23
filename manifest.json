@@ -5,7 +5,12 @@
     "content_scripts" : [
     	{
     		"matches": ["<all_urls>"],
-    		"js": ["jquery-3.5.1.js","scripts/shopify/shopify-autofill.js"]
+    		"js": ["jquery-3.5.1.js","scripts/shopify/shopify-shipping-billing-autofill.js"]
+      },
+      {
+        "matches": ["https://*.shopifycs.com/*"],
+        "js": ["jquery-3.5.1.js","scripts/shopify/shopify-payment-autofill.js"],
+        "all_frames": true
       }
     ],
     "manifest_version": 2
